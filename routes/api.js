@@ -6,9 +6,10 @@ var ProductosController = require('../controllers/productos');
 var CategoriasController = require('../controllers/categorias');
 
 api.get('/productos', ProductosController.get_products);
+api.get('/producto', ProductosController.get_product);
 api.post('/productos', ProductosController.post_products);
 
 
-api.get('/precio', CategoriasController.get_categorias);
+api.get('/categorias', CategoriasController.get_categorias);
 
 module.exports = api;

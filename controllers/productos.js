@@ -1,4 +1,5 @@
 'use strict'
+var ProductModel = require('../models/products');
 
 var ProductosController = {
     get_products: function(req, res){
@@ -27,6 +28,23 @@ var ProductosController = {
 
     },
 
+    get_product: function(req, res){
+
+        return res.status(200).send({
+            status: 200,
+            message: "Producto encontrado",
+            productos: [
+                {
+                    sku: 123,
+                    precio: 234.50,
+                    descripcion: "Este es un mani",
+                    imagen: "imagen.jpg"
+                }
+            ]
+        });
+
+    },
+
     post_products: (req, res) =>{
         console.log(req.body)
         return res.status(200).send({
@@ -34,6 +52,8 @@ var ProductosController = {
             data: req.body
         });
     }
+
+
 };
 
 module.exports = ProductosController;
