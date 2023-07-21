@@ -6,7 +6,7 @@ var ProductosController = require('../controllers/productos');
 var CategoriasController = require('../controllers/categorias');
 
 api.get('/productos', ProductosController.get_products);
-api.get('/producto', ProductosController.get_product);
+api.get('/producto/:sku', ProductosController.get_product);
 api.post('/productos', ProductosController.post_products);
 
 
