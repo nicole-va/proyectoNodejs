@@ -3,9 +3,9 @@
 Para el desarrollo del proyecto final, será necesario la aplicación de los conceptos visto en
 clases y videos sobre:
 
--Instalación de módulos NPM
--Endpoints
--Uso de colecciones de mongo
+- Instalación de módulos NPM
+- Endpoints
+- Uso de colecciones de mongo
 
 Requerimientos:
 1. Crear CRUD de usuario el cual debe tener (nombre, edad, email, pass)
