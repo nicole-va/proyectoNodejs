@@ -31,7 +31,7 @@ api.post("/login", [
     body('mail').not().isEmpty(),
     body('pass').not().isEmpty()    
 ], AuthContoller.login);
-api.post("/logout", AuthContoller.logout);
+api.post("/logout", userProtectUrl, AuthContoller.logout);
 
 api.get('/categorias', CategoriasController.get_categorias);
 
