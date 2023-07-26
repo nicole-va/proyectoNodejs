@@ -6,8 +6,6 @@ var Sessions = require('../models/sessions');
 
 var controller = {
     login: function (req, res) {
-        //req es los datos q da el usuario
-        //validamos los datos que el usuarios envia al endpoint
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
@@ -95,14 +93,6 @@ var controller = {
 
     logout: function (req, res) {
         console.log(req.decoded);
-      /*  Sessions.findOneAndRemove({user_id: req.decoded.user_id}, (err, sessionDeleted)=>{
-            if(err) return res.status(500).send({message: err});
-            if(!sessionDeleted) return res.status(404).send({message: "Datos erroneos."});
-
-            return res.status(200).send({
-                message: "Usuario salio correctamente."
-            });
-        });*/
         Sessions.findOneAndRemove({ user_id: req.decoded.user_id })
             .exec()
             .then((sessionDeleted) => {
