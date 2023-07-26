@@ -48,44 +48,14 @@ var controller = {
             } catch (err) {
                 return res.status(500).send({ message: err });
             }
-              
-/*
-            Sessions.findOneAndUpdate({ user_id: usuario.id }, update, { upsert: true, new: true })
-                .then((sessionsUpdate) => {
-                    if (!sessionsUpdate) {
-                        return res.status(404).send({ message: "Datos erroneos" });
-                    }
-
-                    return res.status(200).json({
-                        status: 200,
-                        message: "Autenticacion correcta.",
-                        token: access_token,
-                    });
-                })
-                .catch((err) => {
-                    return res.status(500).send({ message: err });
-                });
-*/
-            /*
-                       Sessions.findOneAndUpdate({ user_id: usuario.id }, update, { upsert:true, new:true }, (err, sessionsUpdate) => {
-                            if (err) return res.status(500).send({ message:err });
-            
-                            if (!sessionsUpdate) return res.status(404).send({ message: "Datos erroneos" });
-            
-                            return res.status(200).json({
-                                status: 200,
-                                message: "Autenticacion correcta.",
-                                token: access_token
-                            });
-                        });
-            */
+                     
             return res.status(200).send({
                 status: 200,
                 message: "Usuario logueado",
                 token: access_token
             });
 
-        }).catch((err) => {
+        }).catch((err) => {     
             return res.status(500).send({ status: 500, message: err });
         });
 

@@ -51,7 +51,7 @@ var UsuariosController = {
             var usuarios_model = new UsuariosModel();
 
             usuarios_model.mail = body.mail;
-            usuarios_model.pass = body.name;
+            usuarios_model.pass = body.pass;
             usuarios_model.nombre = body.nombre;
             usuarios_model.edad = body.edad;
 
