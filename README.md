@@ -21,3 +21,6 @@ es válido en base de datos. :heavy_check_mark:
 
 Para un punto extra si logran encriptar sus password en base de datos con uso de algún
 módulo como bcrypt y comparar en login
+
+
+[Video de evidencia del postman](https://youtu.be/fCh-CHEANF0)
